@@ -1,103 +1,83 @@
-const Discord = require("discord.js");
-const client = new Discord.Client();
+#from this line to 
+import discord
+import os
+from discord.ext import commands
 
+client = commands.Bot(command_prefix="e!")
 
-client.on('ready', () => {
- console.log('logged in as ${client.user.tag} !');
-});
+@client.event
+async def on_Ready():
+    print("Bot is ready")
 
-client.on('message', msg =>{
-   if(msg.author.bot){return}
-  if (msg.content.includes("Who is Pudding?")){
-      msg.reply(["Intehai koi Kanjr Admi hai",
-      "You can look for him at ",
-      "https://www.instagram.com/usman._.h/"
-    ])
-  }
-});
+#to this line dont change anything
 
-client.on('message', msg =>{
-   if(msg.author.bot){return}
-    if (msg.content.includes("Who is iceflame?")){
-        msg.reply(["BHT HE SHAREEF OR MASOOM BACHA HAI ","you can look him at",
-        "https://www.instagram.com/mriceflame1/"
-      ])
-    }
-  });
+#add your commands here, copy paste 
+# @client.command()
+#   async def idhr_command_likho(ctx):
+#   await ctx.send("us command pr jo kahe wo yahan likho")
 
-client.on('message', msg =>{
+#after this line press 2 times enter to make space then write command
+
+@client.command()
+async def pudding(ctx):
+    await ctx.send("Intehai koi Kamina insan hai Pudding .")
+
+@client.command()
+async def hello(ctx):
+    await ctx.send("Hello there baby gurl.")
+
+@client.command()
+async def phcomment(ctx):
+    await ctx.send("<@527429958470205451> Isko dekhein, else i would stop simping for you")
     
-if(msg.content === 'e!phcomment'){
-    msg.channel.send(" <@527429958470205451> ISKO dekhein ")
-}
-})
-
-client.on('message', msg =>{
     
-if(msg.content === '.abu'){
-    msg.channel.send(" <@495663537759453184> ko aj bhi lgta hai k bache paryaan dekr jati hain ,chla sbka baap banne,KHASI KAHI KA")
-}
-})
-
-client.on('message', msg =>{
-   if(msg.author.bot){return}
-  if (msg.content.includes("hello")){
-      msg.reply(["Hello ."
+@client.command()
+async def day(ctx):
+    await ctx.send("Today is an amazing day")
     
-    ])
-  }
-});
+@client.command()
+async def dalay(ctx):
+    await ctx.send("Today is an amazing day")
 
-client.on('message', msg =>{
-  if(msg.author.bot){return}
-  if (msg.content.includes("no")){
-      msg.reply(["Then why are you out of kitchen"])
-  }
-});
+@client.command()
+async def couldyouboostforme(ctx):
+    await ctx.send("Read My Name NIGGA")
 
-client.on('message', msg =>{
-    if(msg.author.bot){return}
-    if(msg.content === '.commands'){
-        msg.channel.send("I have the following commands : \n .ice \n .mamba \n .kuti \n \n hello \n no \n NO \n .fu use any :D")
-
-    }
-    });
+@client.command()
+async def perfect(ctx):
+    await ctx.send("Chal hun mera put chuti kr")
     
-client.on('message', msg =>{
+@client.command()
+async def hey(ctx):
+    await ctx.send("Chal hun mera put chuti kr")
     
-if(msg.content === '.ice'){
-  if(msg.author.bot){return}
-    msg.channel.send("Nice Choice Mohtarma")
-}
-});
+@client.command()
+async def BC(ctx):
+    await ctx.send("Bht Cute")
+    
+@client.command()
+async def join(ctx):
+    await ctx.send("Hazir Janab")
 
-client.on('message', msg =>{
-     if(msg.author.bot){return}
-    if(msg.content === '.kuti'){
-        msg.channel.send("RANA SAHAB CHECK KRO KHANZEEL NO", "Aj rana nhi Bachada" )
-    }
-    });
-
-client.on('message', msg =>{
-     if(msg.author.bot){return}
-        if(msg.content === '.fu'){
-            msg.channel.send("*oray Lg gaye")
-        }
-        });
-
-client.on('message', msg =>{
-     if(msg.author.bot){return}
-        if(msg.content === 'who is mia malkova'){
-            msg.channel.send("Puddings Crush")
-        }
-        });
-
-client.on('message', msg =>{
-     if(msg.author.bot){return}
-        if(msg.content === '.mamba'){
-            msg.channel.send("tauba tauba sara mo... \n Disconnected \n han mein kidr tha , ..od khrab krdia")
-        }
-        });
-
-
-client.login(process.env.BOT_TOKEN);
+@client.command()
+async def sakc(ctx):
+    await ctx.send("ABU BULARHE HAIN APKO @Xam#0489")
+    
+@client.command()
+async def danedaar(ctx):
+    await ctx.send("ABU BULARHE HAIN APKO @BlackMamba#0468")
+    
+@client.command()
+async def chutiya(ctx):
+    await ctx.send("ABU BULARHE HAIN APKO Pudding Senpai#0717")
+    
+@client.command()
+async def kutiya(ctx):
+    await ctx.send("ABU BULARHE HAIN APKO Awais#5009")
+    
+@client.command()
+async def banBlackMamba(ctx):
+    await ctx.send("User BlackMamba#0468 will be removed after 1 minute")
+    
+    
+client.run(os.environ['BOT_KEY']) 
