@@ -20,6 +20,16 @@ async def on_Ready():
 
 
 @client.command()
+async def puddings(ctx):
+   await ctx.send("i wana marry you pudding senpai")
+
+ 
+@client.command()
+async def lol(ctx):
+   await ctx.send("LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOL")
+
+
+@client.command()
 async def pudding(ctx):
     await ctx.send("Intehai koi Kamina insan hai Pudding .")
 
