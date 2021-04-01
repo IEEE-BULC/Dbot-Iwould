@@ -18,9 +18,8 @@ async def on_Ready():
 
 #after this line press 2 times enter to make space then write command
 
-
- @client.command()
- async def farhan(ctx):
+@client.command()
+async def farhan(ctx):
   await ctx.send("Will you be mine")
 
 @client.command()
